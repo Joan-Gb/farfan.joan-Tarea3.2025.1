@@ -1,0 +1,25 @@
+# Tarea 2 - Sistemas Reactivos y GUI (Semestre 1, 2025)
+
+## Integrantes
+- Joan Farfán (ROL: 202330511-1 RUT: 21.681.652-8)
+
+## Etapas desarrolladas
+Se desarrollaron las tres etapas:
+- Etapa 1: Sistema de publicación y suscripción básico (Publisher, Subscriber, Broker, Topic).
+- Etapa 2: Publicador de video y botón seguidor (VideoPublisher, VideoFollower).
+- Etapa 3: Publicador GPS con archivo de posiciones y círculo en movimiento (GPSCarPublisher, MovingCircle).
+
+## Compilación
+Para compilar cada etapa:
+```bash
+cd Etapa1
+make
+./Tarea2Etapa1
+
+cd ../Etapa2
+make
+./Tarea2Etapa2
+
+cd ../Etapa3
+make
+./Tarea2Etapa3

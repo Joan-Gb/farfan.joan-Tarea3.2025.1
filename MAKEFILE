@@ -1,0 +1,22 @@
+```make
+QT = Qt6Widgets Qt6Core Qt6Gui
+
+CXX = g++
+CXXFLAGS = -fPIC -Wall -std=c++17 $(shell pkg-config --cflags $(QT))
+LDFLAGS = $(shell pkg-config --libs $(QT))
+
+HEADERS = *.h
+SOURCES = *.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
+TARGET = Tarea2Etapa3
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+%.o: %.cpp $(HEADERS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS)
+
+clean:
+	rm -f *.o $(TARGET)
